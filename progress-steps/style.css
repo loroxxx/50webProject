@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+  font-family: "Courier New", Courier, monospace;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+
+.progress-container::before{
+    content: '';
+    
+    /*
+    实现元素垂直居中
+    */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    background-color: #e0e0e0;
+    height: 4px;
+    width: 100%;
+    
+    z-index: -1; 
+}
+
+
+.progress {
+    background-color: #3498db;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+
+    transition: 0.4s ease;
+  }
+
+.circle {
+  border-width: 1px;
+  border-style: solid;
+}
