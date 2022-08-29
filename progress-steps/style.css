@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: azure;
+  background-color: #f6f7fb;
   font-family: "Courier New", Courier, monospace;
 
   display: flex;
@@ -53,19 +53,58 @@ body {
 .progress {
     background-color: #3498db;
 
+    
     position: absolute;
-    top: 50%;
     left: 0;
+    top: 50%;
     transform: translateY(-50%);
 
     height: 4px;
-    width: 0%;
+    width: %;
     z-index: -1;
 
     transition: 0.4s ease;
   }
 
 .circle {
-  border-width: 1px;
-  border-style: solid;
+  background-color: #fff;
+  border: 3px solid #e0e0e0;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
 }
+
+
+.circle.active{
+    border-color: #3498db;
+}
+
+.btn{
+    background-color: #3498db;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 9px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.88);
+  }
+
+  .btn:focus {
+    outline: 0;
+  }
+
+  .btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
