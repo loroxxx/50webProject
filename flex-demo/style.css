@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 100vh;
+    align-items:center;
+}
+
+.item{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.item:first-child{
+    background-color: yellow;
+}
+
+.item:nth-child(2){
+    background-color: red;
+}
+
+.item:nth-child(3){
+    background-color: blue;
+}
+
+
